@@ -1,0 +1,55 @@
+{
+	"_version": "1.60.0",
+	"sap.app": {
+		"id": "ui5.quickdatabinding",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"handleValidation": true,
+		"dependencies": {
+			"minUI5Version": "1.120.0",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"models": {
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./model/data.json"
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ui5.quickdatabinding.i18n.i18n",
+					"supportedLocales": [
+						"",
+						"de"
+					],
+					"fallbackLocale": ""
+				}
+			},
+			"products" : {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./model/Products.json"
+			}
+		},
+		"rootView": {
+			"viewName": "ui5.quickdatabinding.view.App",
+			"type": "XML",
+			"id": "app"
+		}
+	}
+}
